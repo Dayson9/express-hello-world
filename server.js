@@ -8,10 +8,6 @@ app.get('/', (req, res) => {
 });
 
 app.get('/books', (req, res) => {
-  res.send([
-    {id: 1, title: 'book 1'},
-    {id: 2, title: 'book 2'},
-  ]);
   res.json({
         status: 'success',
         message: 'Data received successfully!'

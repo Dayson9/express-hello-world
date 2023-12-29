@@ -3,6 +3,10 @@ const express= require('express')
 const app = express();
 
 app.get('/', (req, res) => {
+  res.json({
+        status: 'success',
+        message: 'Data received successfully!'
+    });
   res.send('server-af2h.onrender.com');
 });
 
@@ -11,6 +15,10 @@ app.get('/books', (req, res) => {
     {id: 1, title: 'book 1'},
     {id: 2, title: 'book 2'},
   ]);
+  res.json({
+        status: 'success',
+        message: 'Data received successfully!'
+    });
 });
 
 const port = 3001;

@@ -1,13 +1,15 @@
+
 const express= require('express');
 
 const app = express();
-
+const path = require('path');
+const filePath = path.resolve(__dirname, 'index.html')
 app.get('/', (req, res) => {
   res.send('server-af2h.onrender.com');
 });
 
 app.get('/books', (req, res) => {
-  res.send("₦₦₦&");
+  res.sendFile(filePath);
 
   res.json({
         status: 'success',

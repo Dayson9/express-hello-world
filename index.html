@@ -6,14 +6,15 @@
 </head>
 <body>
 <script>
-fetch("https://daysonserver.onrender.com/", {
+    document.write("hello Tunde");
+fetch("/", {
   method: "GET",
 headers: {
     "Content-type": "application/json; charset=UTF-8"
   }
 })
   .then((response) => response.json())
-  .then((json) => alert(JSON.stringify(json)));
+  .then((json) => alert(JSON.stringify(json))).catch((err) => alert(err));
 </script>  
 </body>
 </html>

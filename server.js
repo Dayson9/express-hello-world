@@ -13,7 +13,7 @@ app.get('/books', (req, res) => {
 
   res.json({
         status: 'success',
-        message: 'Data received successfully!'
+        message: 'The stuff is received successfully!'
     });
 });
 

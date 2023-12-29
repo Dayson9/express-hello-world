@@ -7,7 +7,7 @@ app.get('/', (req, res) => {
 });
 
 app.get('/books', (req, res) => {
-  res.send('hello');
+  res.send("₦₦₦&");
 
   res.json({
         status: 'success',

@@ -8,13 +8,9 @@
 <p>Hello World 🌎🌍</p>
 <script>
     document.write("hello Tunde");
-fetch("/books", {
-  method: "GET",
-headers: {
-    "Content-type": "application/json; charset=UTF-8"
-  }
-}).then(response => response.json())
-   .then(json => document.write(JSON.stringify(json))).catch((err) => alert(err));
+fetch("/books").then(response => response.json()).then(json => document.write(JSON.stringify(json))).catch((err) => alert(err));
+alert("hello");
+    document.write("hello");
 </script>  
 </body>
 </html>

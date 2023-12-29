@@ -12,7 +12,8 @@ fetch("/books", {
 headers: {
     "Content-type": "application/json; charset=UTF-8"
   }
-}).then((response) => alert(JSON.stringify(response.json())).catch((err) => alert(err));
+}).then(response => response.json())
+   .then(json => alert(JSON.stringify(json))).catch((err) => alert(err));
 </script>  
 </body>
 </html>

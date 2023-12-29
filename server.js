@@ -8,6 +8,11 @@ app.get('/', (req, res) => {
 
 app.get('/books', (req, res) => {
   res.send('hello');
+
+  res.json({
+        status: 'success',
+        message: 'Data received successfully!'
+    });
 });
 
 const port = 3001;

@@ -5,10 +5,6 @@ const app = express();
 app.get('/', (req, res) => {
   res.send('server-af2h.onrender.com');
 });
-  res.json({
-        status: 'success',
-        message: 'Data received successfully!'
-    });
 });
 
 app.get('/books', (req, res) => {

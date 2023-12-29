@@ -1,6 +1,5 @@
 const express = require('express');
 const app = express();
-const bodyParser = require('body-parser');
 const q_o_a =[{ "q": "Who invented computer?", "a": "Alan Turing", "b": "Elon Musk", "c": "Charles Babbage", "d": "Ada Lovelace", "ans": "c" },
 
   { "q": "In color combination, Green+Blue equals?", "a": "Red", "b": "Cyan", "c": "Orange", "d": "Lightgreen", "ans": "b" },
@@ -20,10 +19,8 @@ const q_o_a =[{ "q": "Who invented computer?", "a": "Alan Turing", "b": "Elon Mu
   { "q": "Sound is measured in...", "a": "Watts", "b": "Ultrasound", "c": "Decibels", "d": "Dioptres", "ans": "c" },
 
   { "q": "Who is the founder of this Quiz?", "a": "Joel greyhat", "b": "Sodiq Tunde", "c": "Ohwi Daniel", "d": "Lamina Timilehin", "ans": "b" }];
-// Middleware
-
-app.use(bodyParser.json());
-app.post('https://daysonserver.onrender.com', (req, res) => {
+// Middlew
+app.post('/', (req, res) => {
     
     // Process the data or perform any backend tasks
     // ...
@@ -36,7 +33,7 @@ app.post('https://daysonserver.onrender.com', (req, res) => {
 });
 
 // Start the server
-const port = 3000;
+const port = 3001;
 app.listen(port, () => {
     console.log(`Server started on port ${port}`);
 });
